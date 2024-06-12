@@ -1,0 +1,25 @@
+
+/* stylings for App component */
+html {
+  background-color: black
+} 
+
+.heading,.sub-heading{
+    color:white;
+    text-align: center;
+}
+.app {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+    color: white;
+  }
+  
+  .last-7-days {
+    margin-bottom: 20px;
+  }
+  

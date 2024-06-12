@@ -1,0 +1,57 @@
+/* src/components/Last7Days.css */
+.last-7-days {
+  margin-bottom: 20px;
+  width: 100%;
+  
+}
+
+h2 {
+  color:white;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr); /* 7 days + 1 habit name column */
+  gap: 10px;
+  align-items: center;
+}
+
+.header, .row {
+  display: contents;
+}
+
+.cell {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.empty {
+  background-color: transparent;
+  border: none;
+}
+
+.day-header {
+  font-weight: bold;
+  background-color: black;
+  color: white;
+}
+
+.habit-name {
+  background-color: black;
+  color: white
+}
+
+.box {
+  height: 20px;
+  cursor: pointer;
+  align-items: center;
+}
+
+.box.completed {
+  background-color: #8bc34a; /* Green for completed */
+}
+
+.box.not-completed {
+  background-color: #e57373; /* Red for not completed */
+}
