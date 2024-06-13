@@ -2,14 +2,18 @@ import React, { useState } from 'react';
 import Calendar from './components/Calendar';
 import Last7Days from './components/Last7Days';
 import CurrentDayHabits from './components/CurrentDayHabits';
+import MotivQuote from './components/MotivQuote'
 import '/home/ianmannn/Codesmith Linux/Projects/Solo Project/src/styles/App.css';
+
+const url = 'https://zenquotes.io/api/random';
+
 
 const App = () => {
   const initialHabits = [//June 30 days initial state
     { name: 'Gym', completed: 
       [
       null, false, false, true, true, false, true, true, 
-      false, false, true, false, false, false, false, 
+      false, true, true, true, false, false, false, 
       false, false, false, false, false, false, false, 
       false, false, false, false, false, false, false, 
       false, false
@@ -17,17 +21,17 @@ const App = () => {
     },
     { name: 'Read For 30 Minutes', completed: 
       [
-      null, false, false, false, true, true, false, false, 
-      false, false, false, false, false, false, false, 
+      null, false, true, true, true, false, false, true, 
+      true, true, true, false, true, false, false, 
       false, false, false, false, false, false, false, 
       false, false, false, false, false, false, false, 
       false, false
       ]
     },
-    { name: 'Hack Hours', completed: 
+    { name: 'No Sugar', completed: 
       [
-      null, false, false, false, true, true, false, true, 
-      false, false, false, false, false, false, false, 
+      null, false, true, true, true, true, true, true, 
+      true, true, true, true, true, false, false, 
       false, false, false, false, false, false, false, 
       false, false, false, false, false, false, false, 
       false, false
@@ -35,8 +39,8 @@ const App = () => {
     },
     { name: 'Cardio', completed: 
       [
-      null, false, false, false, true, true, false, true, 
-      false, false, false, false, false, false, false, 
+      null, false, true, false, false, false, true, false, 
+      false, true, false, false, false, false, false, 
       false, false, false, false, false, false, false, 
       false, false, false, false, false, false, false, 
       false, false
@@ -44,8 +48,8 @@ const App = () => {
     },
     { name: 'Business Building', completed: 
       [
-      null, false, false, false, true, true, false, true, 
-      false, false, false, false, false, false, false, 
+      null, false, true, false, true, false, true, true, 
+      false, true, false, true, true, false, false, 
       false, false, false, false, false, false, false, 
       false, false, false, false, false, false, false, 
       false, false
@@ -53,8 +57,8 @@ const App = () => {
     },
     { name: 'Music Practice', completed: 
       [
-      null, false, false, false, true, true, false, true, 
-      false, false, false, false, false, false, false, 
+      null, false, false, false, false, false, false, false, 
+      true, false, false, false, false, false, false, 
       false, false, false, false, false, false, false, 
       false, false, false, false, false, false, false, 
       false, false
@@ -74,15 +78,16 @@ const App = () => {
       console.log(habit);
       return habit;
     });
-    setHabits(newHabits);
+    setHabits(newHabits); 
   };
 
   return (
     <div className="app">
       <h1>Habit Tracker</h1>
+      <MotivQuote feedUrl = {url}/>
       <CurrentDayHabits habits = {habits} toggleCompletion={toggleCompletion}/>
       <Last7Days habits = {habits} toggleCompletion={toggleCompletion} />
-      <Calendar />
+      <Calendar habits = {habits}/>
     </div>
   );
 };

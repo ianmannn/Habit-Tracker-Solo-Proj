@@ -43,7 +43,7 @@
 
 .today-cell-habit-name {
   padding: 10px;
-  margin-left: 500px;
+  margin-left: 35rem;
   border: 1px solid #ddd;
   text-align: center;
   width: 25rem;
@@ -52,12 +52,12 @@
 }
 
 .box.completed {
-  background-color: #8bc34a; /* Green for completed */
+  background-color: #8dd33c; /* Green for completed */
   color: black
 }
 
 .box.not-completed {
-  background-color: #e57373; /* Red for not completed */
+  background-color: #e05454; /* Red for not completed */
   color: black;
   font-style: bold;
 }

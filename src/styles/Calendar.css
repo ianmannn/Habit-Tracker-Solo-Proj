@@ -10,13 +10,54 @@
   width: 100%
   
 }
+
+h1 {
+  font-size: 50px;
+
+}
   
-  .calendar-day {
+  .calendar-day-red {
     padding: 20px;
-    background-color: black;
+    background-color: #e05454;
     border: 1px solid #ddd;
     height: 6rem;
     text-align: center;
     color: white;
   }
-  
+
+  .calendar-day-yellow {
+    padding: 20px;
+    background-color: rgb(241, 241, 51);
+    border: 1px solid #ddd;
+    height: 6rem;
+    text-align: center;
+    color: white;
+  }
+
+  .calendar-day-green {
+    padding: 20px;
+    background-color: #8dd33c;
+    border: 1px solid #ddd;
+    height: 6rem;
+    text-align: center;
+    color: white;
+  }
+
+  .calendar-day-grey {
+    padding: 20px;
+    background-color: #878a83;
+    border: 1px solid #ddd;
+    height: 6rem;
+    text-align: center;
+    color: white;
+  }
+
+  .calender-day-header{
+    color: black;
+    font-size: 2rem;
+  }
+
+  .calender-day-progress{
+    color: black;
+    font-size: 50px;;
+  }
