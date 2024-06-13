@@ -1,5 +1,5 @@
 import React from 'react';
-import '/home/ianmannn/Codesmith Linux/Projects/Solo Project/src/styles/Last7Days.css'; // Ensure this path is correct
+import '/home/ianmannn/Codesmith Linux/Projects/Solo Project/src/styles/Last7Days.css'; 
 
 const Last7Days = ({ habits, toggleCompletion }) => {
   // Labels for the last 7 days (from 5 to 11)

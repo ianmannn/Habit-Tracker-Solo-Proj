@@ -1,18 +1,23 @@
 import React, { useEffect, useState } from 'react';
+import '/home/ianmannn/Codesmith Linux/Projects/Solo Project/src/styles/MotivQuote.css';
 
 const MotivQuote = () => {
-  const [quote, setQuote] = useState(null);
+  const [quote, setQuote] = useState({ text: "LOADING...", author: "" });
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('https://zenquotes.io/api/random');
+        const response = await fetch('https://type.fit/api/quotes');
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
         const data = await response.json();
-        setQuote(data[0]); // Assuming the API returns an array with one quote object
-        console.log('DATA:', data);
+        const randomQuoteIndex = Math.floor(Math.random() * data.length);
+        let i;
+        let author = data[randomQuoteIndex].author;
+        let authorCleaned = author.includes(',') ? author.split(',')[0] : author;
+        setQuote({text: data[randomQuoteIndex].text, author: authorCleaned });
+        console.log({text: data[randomQuoteIndex].text, author: authorCleaned })
       } catch (error) {
         console.error('Error:', error);
       }
@@ -21,15 +26,16 @@ const MotivQuote = () => {
     fetchData();
   }, []);
 
-  if (!quote) {
+  if (!quote.text) {
     return <div className="quote">Loading...</div>;
   }
 
   return (
     <div className="quote">
-      <p>{quote.q} - {quote.a}</p> {/* Assuming `q` is the quote text and `a` is the author */}
+      <p>"{quote.text}" - {quote.author}</p>
     </div>
   );
 };
 
 export default MotivQuote;
+

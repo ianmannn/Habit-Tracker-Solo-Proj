@@ -1,5 +1,5 @@
 import React from 'react';
-import '/home/ianmannn/Codesmith Linux/Projects/Solo Project/src/styles/CurrentDayHabits.css'; // Ensure this path is correct
+import '/home/ianmannn/Codesmith Linux/Projects/Solo Project/src/styles/CurrentDayHabits.css';
 
 const CurrentDayHabits = ({ habits, toggleCompletion }) => {
   const currentDate = new Date();
@@ -18,7 +18,7 @@ const CurrentDayHabits = ({ habits, toggleCompletion }) => {
       <h2 className="today-header">TODAY</h2>
       <div className="today-grid">
         <div className="today-grid-header">
-          <div className="today-cell empty"></div>
+          <div className="cell today-add" onClick = {() =>}> ADD + </div>
           <div className="today-cell y-label">{day[0]}</div>
         </div>
         {habits.map((habit, habitIndex) => (

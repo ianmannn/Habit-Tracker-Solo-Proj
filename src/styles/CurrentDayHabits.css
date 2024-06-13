@@ -19,6 +19,7 @@
 
 .today-grid-header, .row {
   display: contents;
+  align-items: center;
 }
 
 .today-cell {
@@ -30,9 +31,15 @@
   width: 60%;
 }
 
-.empty {
-  background-color: transparent;
-  border: none;
+.today-add {
+  padding: 10px;
+  margin-left: 35rem;
+  border: 1px solid #ddd;
+  text-align: center;
+  width: 25rem;
+  background-color: white;
+  color: black;
+  cursor: pointer;
 }
 
 .y-label {
@@ -49,6 +56,7 @@
   width: 25rem;
   background-color: #1a73e8;
   color: white;
+  cursor: pointer;
 }
 
 .box.completed {

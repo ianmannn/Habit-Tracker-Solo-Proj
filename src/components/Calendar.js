@@ -14,12 +14,12 @@ const Calendar = ({habits}) => {
       
       habits.forEach((habit) => { //loop through the habits on a given day to find the count of met habits
         if (habit.completed[day] === true) {
-            console.log(habit.completed[0])
-            console.log(habit);
+            // console.log(habit.completed[0])
+            // console.log(habit);
             count += 1;
         }
     });
-    console.log(count);
+    // console.log(count);
     return count; 
   };
 
@@ -43,7 +43,7 @@ const Calendar = ({habits}) => {
   }
   return (
     <div className="cal-header">
-        <h1> JUNE 2024</h1>
+        <h1 className = "cal-h1"> JUNE 2024</h1>
         <div className="calendar">
         {days.map(day => ( //loop through the days array and make a cell for it
             <div key={day} className={setCalColor(getHabitCount(day), day)}>

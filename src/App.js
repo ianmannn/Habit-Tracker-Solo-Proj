@@ -64,6 +64,7 @@ const App = () => {
       false, false
       ]
     },
+  
   ];
 
   const [habits, setHabits] = useState(initialHabits);
@@ -81,9 +82,11 @@ const App = () => {
     setHabits(newHabits); 
   };
 
+  const addHabit = ()
+
   return (
     <div className="app">
-      <h1>Habit Tracker</h1>
+      <h1 classname = "app-h1">Habit Tracker✔</h1>
       <MotivQuote feedUrl = {url}/>
       <CurrentDayHabits habits = {habits} toggleCompletion={toggleCompletion}/>
       <Last7Days habits = {habits} toggleCompletion={toggleCompletion} />
