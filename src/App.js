@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import Calendar from './components/Calendar';
 import Last7Days from './components/Last7Days';
+import CurrentDayHabits from './components/CurrentDayHabits';
 import '/home/ianmannn/Codesmith Linux/Projects/Solo Project/src/styles/App.css';
 
 const App = () => {
-  const initialHabits = [//Last 7 days initial state
+  const initialHabits = [//June 30 days initial state
     { name: 'Gym', completed: 
       [
       null, false, false, true, true, false, true, true, 
@@ -14,7 +15,7 @@ const App = () => {
       false, false
       ]
     },
-    { name: 'Read For 30', completed: 
+    { name: 'Read For 30 Minutes', completed: 
       [
       null, false, false, false, true, true, false, false, 
       false, false, false, false, false, false, false, 
@@ -79,7 +80,8 @@ const App = () => {
   return (
     <div className="app">
       <h1>Habit Tracker</h1>
-      <Last7Days habits={habits} toggleCompletion={toggleCompletion} />
+      <CurrentDayHabits habits = {habits} toggleCompletion={toggleCompletion}/>
+      <Last7Days habits = {habits} toggleCompletion={toggleCompletion} />
       <Calendar />
     </div>
   );

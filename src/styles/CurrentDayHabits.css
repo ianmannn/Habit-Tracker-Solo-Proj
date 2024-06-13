@@ -1,0 +1,63 @@
+.current-day-habits{
+  width: 100%;
+  border-color: red;
+  align-items: center;
+}
+
+.today-header{
+  font-size: 40px;
+}
+
+.today-grid {
+  display: grid;
+  grid-template-columns: repeat(2 , 1fr); /* 7 days + 1 habit name column */
+  gap: 10px;
+  align-items: center;
+  color: white;
+  width: 100rem;
+}
+
+.today-grid-header, .row {
+  display: contents;
+}
+
+.today-cell {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+  /* width: 20rem; */
+  margin-left: 10px;
+  width: 60%;
+}
+
+.empty {
+  background-color: transparent;
+  border: none;
+}
+
+.y-label {
+  font-weight: bold;
+  background-color: black;
+  color: white;
+}
+
+.today-cell-habit-name {
+  padding: 10px;
+  margin-left: 500px;
+  border: 1px solid #ddd;
+  text-align: center;
+  width: 25rem;
+  background-color: #1a73e8;
+  color: white;
+}
+
+.box.completed {
+  background-color: #8bc34a; /* Green for completed */
+  color: black
+}
+
+.box.not-completed {
+  background-color: #e57373; /* Red for not completed */
+  color: black;
+  font-style: bold;
+}

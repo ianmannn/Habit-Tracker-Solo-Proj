@@ -1,16 +1,20 @@
 import React from 'react';
-import '/home/ianmannn/Codesmith Linux/Projects/Solo Project/src/styles/Last7Days.css';
+import '/home/ianmannn/Codesmith Linux/Projects/Solo Project/src/styles/Last7Days.css'; // Ensure this path is correct
 
 const Last7Days = ({ habits, toggleCompletion }) => {
-  // Labels for the last 7 days (from 24 to 30)
-  const days = Array.from({ length: 7 }, (_, i) => `June ${5 + i}`);
+  // Labels for the last 7 days (from 5 to 11)
+  const days = Array.from({ length: 7 }, (_, i) => `June ${6 + i}`);
 
   // Indices for the last 7 days
-  const last7DaysIndices = Array.from({ length: 7 }, (_, i) => 5 + i);
+  const last7DaysIndices = Array.from({ length: 7 }, (_, i) => 6 + i);
 
   // Function to determine the box class based on completion status
   const getBoxClass = (completed) => {
     return completed ? 'cell box completed' : 'cell box not-completed';
+  };
+
+  const getBoxText = (completed) => {
+    return completed ? '✔' : '✖';
   };
 
   return (
@@ -31,7 +35,9 @@ const Last7Days = ({ habits, toggleCompletion }) => {
                 key={dayIndex}
                 className={getBoxClass(habit.completed[dayIndex])}
                 onClick={() => toggleCompletion(habitIndex, dayIndex)}
-              />
+              >
+                {getBoxText(habit.completed[dayIndex])}
+              </div>
             ))}
           </div>
         ))}

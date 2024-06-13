@@ -2,7 +2,6 @@
 .last-7-days {
   margin-bottom: 20px;
   width: 100%;
-  
 }
 
 h2 {
@@ -38,7 +37,7 @@ h2 {
 }
 
 .habit-name {
-  background-color: black;
+  background-color: #1a73e8;
   color: white
 }
 
@@ -50,8 +49,10 @@ h2 {
 
 .box.completed {
   background-color: #8bc34a; /* Green for completed */
+  border-radius: 50px;
 }
 
 .box.not-completed {
   background-color: #e57373; /* Red for not completed */
+  border-radius: 50px;
 }
